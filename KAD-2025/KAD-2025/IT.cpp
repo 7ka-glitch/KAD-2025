@@ -38,57 +38,21 @@ namespace IT
 			FullName = string(this->id);
 	}
 
-	Entry::Entry(int idxfirstLE, IDDATATYPE iddatatype, IDTYPE idtype, char* value)
+	Entry::Entry(int idxfirstLE, IDDATATYPE iddatatype, IDTYPE idtype, char* value)			
 	{
-		
+		char str[10];
+		static int count = 0;
+		sprintf(str, "%d", count++);
+		strcpy(this->id, "L");
+		strcat(this->id, str);
 		strcpy(this->areaOfVisibility, GLOBAL);
 		this->idxfirstLE = idxfirstLE;
 		this->iddatatype = iddatatype;
 		this->idtype = idtype;
-
 		if (iddatatype == IT::IDDATATYPE::INT)
+			this->value.vint = atoi(value);
+		else
 		{
-			
-			bool negative = false;
-			const char* p = value;
-
-			if (*p == '+' || *p == '-')
-			{
-				if (*p == '-') negative = true;
-				++p;
-			}
-
-			long long result = 0;
-			while (*p && isdigit(static_cast<unsigned char>(*p)))
-			{
-				int digit = *p - '0';
-
-			
-			
-				if (result > (2147483647LL / 10))
-					throw ERROR_THROW(708);
-
-				result = result * 10 + digit;
-				++p;
-			}
-
-			if (negative)
-				result = -result;
-
-			
-			if (result > 2147483647LL || result < -2147483648LL)
-				throw ERROR_THROW(708);
-
-			this->value.vint = static_cast<int>(result);
-		}
-		else 
-		{
-			
-			if (strlen(value) > TI_STR_MAXSIZE - 1)
-			{
-				throw ERROR_THROW(125); // Ошибка: Превышен размер лексемы (или создайте новую ошибку "Слишком длинная строка")
-			}
-
 			this->value.vstr.len = strlen(value);
 			strncpy(this->value.vstr.str, value, TI_STR_MAXSIZE - 1);
 			this->value.vstr.str[TI_STR_MAXSIZE - 1] = TI_STR_DEFAULT;

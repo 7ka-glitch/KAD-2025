@@ -91,52 +91,21 @@ namespace SM
 						 
 						if (lefttype == IT::IDDATATYPE::INT)
 						{
+							
+
 							if (l == LEX_OPERATOR)
 							{
-								 
+								
 								if (lextable.table[k - 1]->idxTI == LT_TI_NULLXDX || lextable.table[k + 1]->idxTI == LT_TI_NULLXDX)
 								{
 									continue;
 								}
 
-								IT::Entry* leftEntry = idtable.table[lextable.table[k - 1]->idxTI];
-								IT::Entry* rightEntry = idtable.table[lextable.table[k + 1]->idxTI];
-
-								IT::IDDATATYPE leftOp = leftEntry->iddatatype;
-								IT::IDDATATYPE rightOp = rightEntry->iddatatype;
+								IT::IDDATATYPE leftOp = idtable.table[lextable.table[k - 1]->idxTI]->iddatatype;
+								IT::IDDATATYPE rightOp = idtable.table[lextable.table[k + 1]->idxTI]->iddatatype;
 
 								if (leftOp != IT::IDDATATYPE::INT || rightOp != IT::IDDATATYPE::INT)
 									throw ERROR_THROW_IN(701, lextable.table[k]->sn, lextable.table[k]->tn);
-
-							 
-								if (leftEntry->idtype == IT::IDTYPE::L && rightEntry->idtype == IT::IDTYPE::L)
-								{
-									long long a = leftEntry->value.vint;
-									long long b = rightEntry->value.vint;
-									long long r = 0;
-
-									switch (lextable.table[k]->sign)
-									{
-									case '+': r = a + b; break;
-									case '-': r = a - b; break;
-									case '*': r = a * b; break;
-									case '/':
-										 
-										if (b == 0)
-											throw ERROR_THROW_IN(700, lextable.table[k + 1]->sn, lextable.table[k + 1]->tn);
-										 
-										if (a == -2147483648LL && b == -1)
-											throw ERROR_THROW_IN(708, lextable.table[k]->sn, lextable.table[k]->tn);
-										r = a / b;
-										break;
-									default:
-										 
-										continue;
-									}
-
-									if (r < -2147483648LL || r > 2147483647LL)
-										throw ERROR_THROW_IN(708, lextable.table[k]->sn, lextable.table[k]->tn);
-								}
 							}
 						}
 					}
