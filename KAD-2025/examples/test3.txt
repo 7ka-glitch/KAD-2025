@@ -1,0 +1,13 @@
+int function manyParams(int param a, int param b, int param c, int param d, int param e, int param f, int param g, int param h, int param i, int param j)
+{
+   int sum = a+b+c+d+e+f+g+h+i+j;
+   return sum;
+}
+
+main
+{
+    write("--- 10 Params Test ---");
+    # Передаем 10 параметров Если парсер сломается на 9, тест упадет
+    int res = manyParams(1, 1, 1, 1, 1, 1, 1, 1, 1, 1);
+    write(res);
+}

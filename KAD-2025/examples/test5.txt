@@ -1,0 +1,17 @@
+int function zalupa(){
+
+}
+
+main
+{
+    write("--- Div by Zero ---");
+    int x = 10;
+    int y = 0;
+    str z;
+    
+    #dasdadsa
+
+    write("About to crash");
+    z = x/0 ;
+    write("Should not see this");
+}

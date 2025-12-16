@@ -1,0 +1,48 @@
+----- Протокол ----- Дата: 09.12.2025 вторник 23:53:18 
+
+----- Параметры -----
+-log: D:\KAD-2022-CourseProject-main\KAD-2022\examples\test5.txt.log
+-out: D:\KAD-2022-CourseProject-main\KAD-2022\examples\test5.txt.asm
+-in: D:\KAD-2022-CourseProject-main\KAD-2022\examples\test5.txt
+
+----- Исходные данные -----
+Количество символов	: 222
+Проигнорировано		: 40
+Количество строк	: 17
+
+Шаг :Правило             Входная лента                 Стек                
+0   :S->tfi(F){NrE;}S    tfi(){}m{w(l);ti=l;ti=l;t     S$                  
+1   : SAVESTATE:          1
+1   :                    tfi(){}m{w(l);ti=l;ti=l;t     tfi(F){NrE;}S$      
+2   :                    fi(){}m{w(l);ti=l;ti=l;ti     fi(F){NrE;}S$       
+3   :                    i(){}m{w(l);ti=l;ti=l;ti;     i(F){NrE;}S$        
+4   :                    (){}m{w(l);ti=l;ti=l;ti;w     (F){NrE;}S$         
+5   :                    ){}m{w(l);ti=l;ti=l;ti;w(     F){NrE;}S$          
+6   :F->                 ){}m{w(l);ti=l;ti=l;ti;w(     F){NrE;}S$          
+7   : SAVESTATE:          2
+7   :                    ){}m{w(l);ti=l;ti=l;ti;w(     ){NrE;}S$           
+8   :                    {}m{w(l);ti=l;ti=l;ti;w(l     {NrE;}S$            
+9   :                    }m{w(l);ti=l;ti=l;ti;w(l)     NrE;}S$             
+10  :N->                 }m{w(l);ti=l;ti=l;ti;w(l)     NrE;}S$             
+11  : SAVESTATE:          3
+11  :                    }m{w(l);ti=l;ti=l;ti;w(l)     rE;}S$              
+12  : TNS_NS_NORULECHAIN/NS_NORULE
+12  : RESTATE             
+12  :                    }m{w(l);ti=l;ti=l;ti;w(l)     NrE;}S$             
+13  : TNS_NS_NORULECHAIN/NS_NORULE
+13  : RESTATE             
+13  :                    ){}m{w(l);ti=l;ti=l;ti;w(     F){NrE;}S$          
+14  : TNS_NS_NORULECHAIN/NS_NORULE
+14  : RESTATE             
+14  :                    tfi(){}m{w(l);ti=l;ti=l;t     S$                  
+15  :S->                 tfi(){}m{w(l);ti=l;ti=l;t     S$                  
+16  : SAVESTATE:          1
+16  :                    tfi(){}m{w(l);ti=l;ti=l;t     $                   
+17  : TNS_NS_NORULECHAIN/NS_NORULE
+17  : RESTATE             
+17  :                    tfi(){}m{w(l);ti=l;ti=l;t     S$                  
+18  : TNS_NS_NORULECHAIN/NS_NORULE
+19  : ------>NS_NORULE    
+------------------------------------------------------------------------------------------   ------
+601: строка 3,	Ошибочный оператор
+Синтаксический анализ завершен с ошибками

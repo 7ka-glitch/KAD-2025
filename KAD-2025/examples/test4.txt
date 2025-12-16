@@ -1,0 +1,19 @@
+int function zaza()
+{
+  return 2*2;
+}
+
+main
+{
+    write("--- Complex Write ---");
+    
+    int x = ha; #10 в 16сс
+    int aaqqaaqqaaqqaaqqaaqqaaqq = -2147483648;
+    write(2+122);
+    write((x * 2) + (10 / 2)); # ќжидаетс€: 25
+    
+    write(2 + 2 * 2);          # ќжидаетс€: 6
+    
+    str s = "Hello";
+    write(lenght(s) + 5);      # ќжидаетс€: 10 (5 букв + 5)
+}

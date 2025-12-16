@@ -1,0 +1,19 @@
+main
+{
+    write("--- Nested Cycles ---");
+    
+    int counter = 0;
+    
+    cycle 3
+    {
+        write("Outer");
+        cycle 2
+        {
+            write("Inner");
+            counter = counter + 1;
+        };
+    };
+    
+    write("Total iterations:");
+    write(counter); # Ожидается: 6
+}

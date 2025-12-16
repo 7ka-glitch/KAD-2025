@@ -1,0 +1,35 @@
+﻿Сборка начата 24.11.2025 01:37:09.
+Уровень детализации журнала: Normal.     1>Проект "D:\KAD-2022-CourseProject-main\KAD-2022\StaticLib\StaticLib.vcxproj" в узле 3 (целевые объекты Rebuild).
+     1>_PrepareForClean:
+         Файл "Debug\StaticLib.tlog\StaticLib.lastbuildstate" удаляется.
+       PrepareForBuild:
+         Структурированный вывод включен. Форматирование диагностики компилятора будет отражать иерархию ошибок. Подробнее см. https://aka.ms/cpp/structured-output.
+       InitializeBuildStatus:
+         Создание "Debug\StaticLib.tlog\unsuccessfulbuild", так как было задано "AlwaysCreate".
+         Обращение к "Debug\StaticLib.tlog\unsuccessfulbuild".
+       ClCompile:
+         D:\VS\heads\VC\Tools\MSVC\14.42.34433\bin\HostX86\x86\CL.exe /c /ZI /JMC /nologo /W3 /WX- /diagnostics:column /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /permissive- /Fo"Debug\\" /Fd"D:\KAD-2022-CourseProject-main\KAD-2022\Debug\StaticLib.pdb" /external:W3 /Gd /TP /analyze- /FC /errorReport:prompt StandartFunc.cpp
+         StandartFunc.cpp
+     1>D:\KAD-2022-CourseProject-main\KAD-2022\StaticLib\StandartFunc.cpp(50,13): warning C4244: return: преобразование "double" в "int", возможна потеря данных
+     1>D:\KAD-2022-CourseProject-main\KAD-2022\StaticLib\StandartFunc.cpp(55,13): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+     1>D:\KAD-2022-CourseProject-main\KAD-2022\StaticLib\StandartFunc.cpp(70,14): warning C4244: return: преобразование "double" в "int", возможна потеря данных
+       Lib:
+         D:\VS\heads\VC\Tools\MSVC\14.42.34433\bin\HostX86\x86\Lib.exe /OUT:"D:\KAD-2022-CourseProject-main\KAD-2022\Debug\StaticLib.lib" /NOLOGO /MACHINE:X86 Debug\StandartFunc.obj
+         StaticLib.vcxproj -> D:\KAD-2022-CourseProject-main\KAD-2022\Debug\StaticLib.lib
+       FinalizeBuildStatus:
+         Файл "Debug\StaticLib.tlog\unsuccessfulbuild" удаляется.
+         Обращение к "Debug\StaticLib.tlog\StaticLib.lastbuildstate".
+     1>Сборка проекта "D:\KAD-2022-CourseProject-main\KAD-2022\StaticLib\StaticLib.vcxproj" завершена (целевые объекты Rebuild).
+
+Сборка успешно завершена.
+
+       "D:\KAD-2022-CourseProject-main\KAD-2022\StaticLib\StaticLib.vcxproj" (целевой объект Rebuild ) (1) ->
+       (Целевой объект ClCompile) -> 
+         D:\KAD-2022-CourseProject-main\KAD-2022\StaticLib\StandartFunc.cpp(50,13): warning C4244: return: преобразование "double" в "int", возможна потеря данных
+         D:\KAD-2022-CourseProject-main\KAD-2022\StaticLib\StandartFunc.cpp(55,13): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+         D:\KAD-2022-CourseProject-main\KAD-2022\StaticLib\StandartFunc.cpp(70,14): warning C4244: return: преобразование "double" в "int", возможна потеря данных
+
+    Предупреждений: 3
+    Ошибок: 0
+
+Прошло времени 00:00:04.07

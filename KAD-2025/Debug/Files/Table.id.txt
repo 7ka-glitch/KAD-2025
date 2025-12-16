@@ -1,0 +1,31 @@
+ПЕРЕМЕННЫЕ
+Индекс LE	Область видимости	Идентификатор	Тип Идентификатора	Тип данных	Значение	Длина строки
+        6	             zaza	            x	                 P	       INT	       0	           -
+       10	             zaza	            y	                 P	       INT	       0	           -
+       37	             main	            b	                 V	       INT	       0	           -
+       52	             main	            x	                 V	       INT	       0	           -
+       59	             main	aaqqaaqqaaqqaaqqaaqq	                 V	       INT	       0	           -
+       95	             main	          ava	                 V	       INT	       0	           -
+      112	             main	            s	                 V	       STR	        	           0
+      117	             main	           za	                 V	       STR	        	           0
+      140	             main	           st	                 V	       STR	        	           0
+
+ФУНКЦИИ
+Индекс LE	Область видимости	Идентификатор	Тип данных возврата
+        0	           global	       lenght	                INT
+        0	           global	     intToStr	                STR
+        2	           global	         zaza	                INT
+
+ЛИТЕРАЛЫ
+Индекс LE	Идентификатор	Тип данных	Длина строки		                 Значение
+       14	                    INT	              -		                                       2	
+       18	                    STR	             13                                     	"Hello World"
+       33	                    STR	             12                                     	"---TEST---"
+       41	                    INT	              -		                                       1	
+       54	                    INT	              -		                                      10	
+       61	                    INT	              -		                             -2147483648	
+       67	                    INT	              -		                                     122	
+      114	                    STR	              7                                     	"Hello"
+      131	                    INT	              -		                                       5	
+      142	                    STR	              4                                     	"b="
+      148	                    INT	              -		                                       3	

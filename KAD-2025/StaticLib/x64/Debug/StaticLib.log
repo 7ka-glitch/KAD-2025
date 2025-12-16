@@ -1,0 +1,31 @@
+﻿Сборка начата 16.12.2025 18:32:21.
+Уровень детализации журнала: Normal.     1>Проект "D:\KAD-2025-CourseProject-main\KAD-2025\StaticLib\StaticLib.vcxproj" в узле 2 (целевые объекты Rebuild).
+     1>_PrepareForClean:
+         Файл "x64\Debug\StaticLib.tlog\StaticLib.lastbuildstate" удаляется.
+       PrepareForBuild:
+         Структурированный вывод включен. Форматирование диагностики компилятора будет отражать иерархию ошибок. Подробнее см. https://aka.ms/cpp/structured-output.
+       InitializeBuildStatus:
+         Создание "x64\Debug\StaticLib.tlog\unsuccessfulbuild", так как было задано "AlwaysCreate".
+         Обращение к "x64\Debug\StaticLib.tlog\unsuccessfulbuild".
+       ClCompile:
+         D:\VS\heads\VC\Tools\MSVC\14.42.34433\bin\HostX64\x64\CL.exe /c /ZI /JMC /nologo /W3 /WX- /diagnostics:column /sdl /Od /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /permissive- /Fo"x64\Debug\\" /Fd"D:\KAD-2025-CourseProject-main\KAD-2025\x64\Debug\StaticLib.pdb" /external:W3 /Gd /TP /FC /errorReport:prompt StandartFunc.cpp
+         StandartFunc.cpp
+     1>D:\KAD-2025-CourseProject-main\KAD-2025\StaticLib\StandartFunc.cpp(14,16): warning C4267: return: преобразование из "size_t" в "int"; возможна потеря данных
+       Lib:
+         D:\VS\heads\VC\Tools\MSVC\14.42.34433\bin\HostX64\x64\Lib.exe /OUT:"D:\KAD-2025-CourseProject-main\KAD-2025\x64\Debug\StaticLib.lib" /NOLOGO /MACHINE:X64 x64\Debug\StandartFunc.obj
+         StaticLib.vcxproj -> D:\KAD-2025-CourseProject-main\KAD-2025\x64\Debug\StaticLib.lib
+       FinalizeBuildStatus:
+         Файл "x64\Debug\StaticLib.tlog\unsuccessfulbuild" удаляется.
+         Обращение к "x64\Debug\StaticLib.tlog\StaticLib.lastbuildstate".
+     1>Сборка проекта "D:\KAD-2025-CourseProject-main\KAD-2025\StaticLib\StaticLib.vcxproj" завершена (целевые объекты Rebuild).
+
+Сборка успешно завершена.
+
+       "D:\KAD-2025-CourseProject-main\KAD-2025\StaticLib\StaticLib.vcxproj" (целевой объект Rebuild ) (1) ->
+       (Целевой объект ClCompile) -> 
+         D:\KAD-2025-CourseProject-main\KAD-2025\StaticLib\StandartFunc.cpp(14,16): warning C4267: return: преобразование из "size_t" в "int"; возможна потеря данных
+
+    Предупреждений: 1
+    Ошибок: 0
+
+Прошло времени 00:00:01.92

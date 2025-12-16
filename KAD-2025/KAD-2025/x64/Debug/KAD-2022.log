@@ -1,0 +1,14 @@
+﻿Сборка начата 16.12.2025 15:22:22.
+Уровень детализации журнала: Normal.     1>Проект "D:\KAD-2025-CourseProject-main\KAD-2025\KAD-2025\KAD-2022.vcxproj" в узле 1 (целевые объекты Rebuild).
+     1>D:\KAD-2025-CourseProject-main\KAD-2025\KAD-2025\KAD-2022.vcxproj : error MSB4025: не удалось загрузить файл проекта. Файл 'D:\KAD-2025-CourseProject-main\KAD-2025\KAD-2025\KAD-2022.vcxproj' не найден.
+     1>Сборка проекта "D:\KAD-2025-CourseProject-main\KAD-2025\KAD-2025\KAD-2022.vcxproj" завершена (целевые объекты Rebuild) с ошибкой.
+
+Ошибка сборки.
+
+       "D:\KAD-2025-CourseProject-main\KAD-2025\KAD-2025\KAD-2022.vcxproj" (целевой объект Rebuild ) (1) ->
+         D:\KAD-2025-CourseProject-main\KAD-2025\KAD-2025\KAD-2022.vcxproj : error MSB4025: не удалось загрузить файл проекта. Файл 'D:\KAD-2025-CourseProject-main\KAD-2025\KAD-2025\KAD-2022.vcxproj' не найден.
+
+    Предупреждений: 0
+    Ошибок: 1
+
+Прошло времени 00:00:00

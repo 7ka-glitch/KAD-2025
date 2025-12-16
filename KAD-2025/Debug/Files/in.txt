@@ -1,0 +1,38 @@
+int function zaza(int param x, int param y)
+{
+  cycle 2
+  {
+     write("Hello World");
+  };
+  return x*y;
+
+}
+
+main
+{
+    #test code
+    write("---TEST---");
+    int b=zaza(1,2);
+    write(b);
+    int x = ha-2;
+    int aaqqaaqqaaqqaaqqaaqqaaqq = -2147483648;
+    write(2+122);
+    write((x * 2) + (10 / 2));     
+    write(x + 2 * 2);        
+    int ava =   -2147483648;
+    write(ava);
+    write(-2147483648-1);
+
+    str s = "Hello";
+    str za = intToStr(2);
+    write(lenght(za) + 5);      
+    write(za);
+    str st="b=";
+    write(2^3^2);
+    cycle 1+3
+    {
+	write(st);
+	write(b);
+    };
+}
+
