@@ -1,27 +1,24 @@
-﻿Сборка начата 17.12.2025 17:18:07.
-Уровень детализации журнала: Normal.     1>Проект "D:\KAD-2025-CourseProject-main\KAD-2025\ASM\ASM.vcxproj" в узле 3 (целевые объекты Rebuild).
-     1>_PrepareForClean:
-         Файл "x64\Debug\ASM.tlog\ASM.lastbuildstate" удаляется.
-       PrepareForBuild:
+﻿Сборка начата 17.12.2025 23:04:20.
+Уровень детализации журнала: Normal.     1>Проект "D:\KAD-2025-CourseProject-main\KAD-2025\ASM\ASM.vcxproj" в узле 2 (целевые объекты Build).
+     1>PrepareForBuild:
          Структурированный вывод включен. Форматирование диагностики компилятора будет отражать иерархию ошибок. Подробнее см. https://aka.ms/cpp/structured-output.
        InitializeBuildStatus:
+         Создание "x64\Debug\ASM.tlog\unsuccessfulbuild", так как было задано "AlwaysCreate".
          Обращение к "x64\Debug\ASM.tlog\unsuccessfulbuild".
        _MASM:
          Assembling ..\Debug\Files\in.txt.asm...
-         cmd.exe /C "C:\Users\karly\AppData\Local\Temp\tmpf834b8e0f47247c38b004cf5e83c75c1.cmd"
+         cmd.exe /C "C:\Users\karly\AppData\Local\Temp\tmp2ee5702534f942d9aa464197154d6750.cmd"
          ml64.exe /c /nologo /Zi /Fo"x64\Debug\in.txt.obj" /W3 /errorReport:prompt  /Ta..\Debug\Files\in.txt.asm
        Link:
          D:\VS\heads\VC\Tools\MSVC\14.42.34433\bin\HostX64\x64\link.exe /ERRORREPORT:PROMPT /OUT:"D:\KAD-2025-CourseProject-main\KAD-2025\x64\Debug\ASM.exe" /INCREMENTAL /ILK:"x64\Debug\ASM.ilk" /NOLOGO /LIBPATH:"D:\KAD-2025-CourseProject-main\KAD-2025\x64\Debug\\" kernel32.lib StaticLib.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:\KAD-2025-CourseProject-main\KAD-2025\x64\Debug\ASM.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\KAD-2025-CourseProject-main\KAD-2025\x64\Debug\ASM.lib" /MACHINE:X64 x64\Debug\in.txt.obj
-     1>LINK : fatal error LNK1104: не удается открыть файл "StaticLib.lib"
-     1>Сборка проекта "D:\KAD-2025-CourseProject-main\KAD-2025\ASM\ASM.vcxproj" завершена (целевые объекты Rebuild) с ошибкой.
+         ASM.vcxproj -> D:\KAD-2025-CourseProject-main\KAD-2025\x64\Debug\ASM.exe
+       FinalizeBuildStatus:
+         Файл "x64\Debug\ASM.tlog\unsuccessfulbuild" удаляется.
+         Обращение к "x64\Debug\ASM.tlog\ASM.lastbuildstate".
+     1>Сборка проекта "D:\KAD-2025-CourseProject-main\KAD-2025\ASM\ASM.vcxproj" завершена (целевые объекты Build).
 
-Ошибка сборки.
-
-       "D:\KAD-2025-CourseProject-main\KAD-2025\ASM\ASM.vcxproj" (целевой объект Rebuild ) (1) ->
-       (Целевой объект Link) -> 
-         LINK : fatal error LNK1104: не удается открыть файл "StaticLib.lib"
-
+Сборка успешно завершена.
     Предупреждений: 0
-    Ошибок: 1
+    Ошибок: 0
 
-Прошло времени 00:00:01.26
+Прошло времени 00:00:00.49

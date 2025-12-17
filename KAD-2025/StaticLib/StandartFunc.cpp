@@ -8,20 +8,20 @@
 
 extern "C"
 {
-	// 1. lenght (длина строки)
+	
 	int lenght(char* str)
 	{
 		return strlen(str);
 	}
 
-	// 2. write_int (вывод числа) 
+	
 	 int write_int(int p)
 	{
 		std::cout << p << std::endl;
 		return 0;
 	}
 
-	// 3. write_str (вывод строки)
+	
 	int write_str(char* str)
 	{
 		SetConsoleOutputCP(1251);
@@ -29,7 +29,7 @@ extern "C"
 		return 0;
 	}
 
-	//преобразование int в char*
+	
 	char* intToStr(int num)
 	{
 		

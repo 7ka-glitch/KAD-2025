@@ -71,8 +71,9 @@ namespace SM
 			}
 			case LEX_EQUAL: 
 			{
-				if (idtable.table[lextable.table[i + 1]->idxTI]->value.vint > 2147483647 || idtable.table[lextable.table[i + 1]->idxTI]->value.vint < -2147483648)
-					throw ERROR_THROW_IN(708, lextable.table[i+1]->sn, lextable.table[i+1]->tn);
+				if(idtable.table[lextable.table[i + 1]->idxTI]->iddatatype== IT::IDDATATYPE::INT)
+					if (idtable.table[lextable.table[i + 1]->idxTI]->value.vint > 2147483647 || idtable.table[lextable.table[i + 1]->idxTI]->value.vint < -2147483648)
+						throw ERROR_THROW_IN(708, lextable.table[i+1]->sn, lextable.table[i+1]->tn);
 				if (i > 0)
 				{
 					IT::IDDATATYPE lefttype = idtable.table[lextable.table[i - 1]->idxTI]->iddatatype;
