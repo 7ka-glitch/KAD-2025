@@ -35,7 +35,7 @@ namespace IT	// таблица идентификатов
 		IDTYPE	idtype;							// тип идентикатора
 		union
 		{
-			int vint;							// значение integer
+			long long vint;							// значение integer
 			struct
 			{
 				unsigned char len;				// количесво символов в string

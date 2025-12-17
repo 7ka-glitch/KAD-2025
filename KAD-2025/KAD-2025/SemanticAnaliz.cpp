@@ -18,11 +18,61 @@ namespace SM
 					
 						if (idtable.table[lextable.table[i + 1]->idxTI]->value.vint == 0)
 							throw ERROR_THROW_IN(700, lextable.table[i + 1]->sn, lextable.table[i + 1]->tn);
+
+
+				bool isFirstOp = false;
+				if (i > 0 && (lextable.table[i - 1]->lexema == LEX_ID || lextable.table[i - 1]->lexema == LEX_LITERAL)) {
+					if (i < 2 || (lextable.table[i - 2]->lexema != LEX_OPERATOR)) {
+						isFirstOp = true;
+					}
+				}
+
+				if (isFirstOp) {
+					
+					int firstOpIdx = lextable.table[i - 1]->idxTI;
+					if (firstOpIdx == LT_TI_NULLXDX) break;
+
+					long long accumulator = (long long)idtable.table[firstOpIdx]->value.vint;
+
+					
+					for (int k = i; k < lextable.current_size; k++) {
+						LT::Entry* curLex = lextable.table[k];
+
+						
+						if (curLex->lexema == LEX_SEMICOLON || curLex->lexema == LEX_RIGHTHESIS || curLex->lexema == LEX_COMMA)
+							break;
+
+						if (curLex->lexema == LEX_OPERATOR) {
+							char op = curLex->sign;
+							int nextIdx = lextable.table[k + 1]->idxTI;
+
+							if (nextIdx == LT_TI_NULLXDX) break;
+
+							
+							long long nextVal = (long long)idtable.table[nextIdx]->value.vint;
+
+							if (op == '+') accumulator += nextVal;
+							else if (op == '-') accumulator -= nextVal;
+							else if (op == '*') accumulator *= nextVal;
+							else if (op == '/') {
+								if (nextVal == 0) throw ERROR_THROW_IN(700, curLex->sn, curLex->tn);
+								accumulator /= nextVal;
+							}
+
+							
+							if (accumulator > 2147483647LL || accumulator < -2147483648LL) {
+								throw ERROR_THROW_IN(708, curLex->sn, curLex->tn);
+							}
+						}
+					}
+				}
 					
 				break;
 			}
 			case LEX_EQUAL: 
 			{
+				if (idtable.table[lextable.table[i + 1]->idxTI]->value.vint > 2147483647 || idtable.table[lextable.table[i + 1]->idxTI]->value.vint < -2147483648)
+					throw ERROR_THROW_IN(708, lextable.table[i+1]->sn, lextable.table[i+1]->tn);
 				if (i > 0)
 				{
 					IT::IDDATATYPE lefttype = idtable.table[lextable.table[i - 1]->idxTI]->iddatatype;
@@ -91,8 +141,6 @@ namespace SM
 						 
 						if (lefttype == IT::IDDATATYPE::INT)
 						{
-							
-
 							if (l == LEX_OPERATOR)
 							{
 								

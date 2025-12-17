@@ -1,4 +1,10 @@
+int function y(int param a, int param b)
+{
+	return a+2147483647;
+}
+
 main 
 {
- int x =2147483648;
+ int x = 2147483645+y(1,2);
+ str a=intToStr(1+1);
 }

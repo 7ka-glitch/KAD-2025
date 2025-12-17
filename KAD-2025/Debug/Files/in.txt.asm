@@ -13,16 +13,51 @@ nul qword 0
 pauseStr db "pause",0
 
 	L0 qword 2147483647
+	L1 qword 2147483645
+	L2 qword 1
+	L3 qword 2
 .data
 
 	x_main qword 0
 .code
 
+;----------- y ------------
+y PROC, a_y: QWORD, b_y: QWORD
+mov a_y, rcx
+mov b_y, rdx
+
+mov rax, a_y
+push rax
+mov rax, L0
+push rax
+pop rcx
+pop rax
+add rax, rcx
+push rax
+pop rax
+ret
+
+y ENDP
+;------------------------------
+
+
 ;----------- MAIN ------------
 main PROC
 sub rsp, 28h
 
-mov rax, L0
+mov rax, L1
+push rax
+sub rsp, 20h
+mov rax, L2
+mov rcx, rax
+mov rax, L3
+mov rdx, rax
+call y
+add rsp, 20h
+push rax
+pop rcx
+pop rax
+add rax, rcx
 push rax
 pop rax
 mov x_main, rax

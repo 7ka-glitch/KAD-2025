@@ -50,7 +50,7 @@ namespace IT
 		this->iddatatype = iddatatype;
 		this->idtype = idtype;
 		if (iddatatype == IT::IDDATATYPE::INT)
-			this->value.vint = atoi(value);
+			this->value.vint = atoll(value);
 		else
 		{
 			this->value.vstr.len = strlen(value);
