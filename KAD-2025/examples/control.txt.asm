@@ -15,7 +15,7 @@ pauseStr db "pause",0
 	L0 qword 2
 	L1 db "Hello World", 0
 	L2 db "---TEST---", 0
-	L3 qword -1
+	L3 qword 1
 	L4 qword 10
 	L5 qword -2147483648
 	L6 qword 122
@@ -23,7 +23,6 @@ pauseStr db "pause",0
 	L8 qword 5
 	L9 db "b=", 0
 	L10 qword 3
-	L11 qword 1
 .data
 
 	b_main qword 0
@@ -251,7 +250,7 @@ sub rsp, 20h
 call write_int
 add rsp, 20h
 
-mov rax, L11
+mov rax, L3
 push rax
 mov rax, L10
 push rax

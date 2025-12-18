@@ -12,7 +12,7 @@ main
 {
     #test code
     write("---TEST---");
-    int b=zaza(-1,2);
+    int b=zaza(1,2);
     write(b);
     int x = ha-2;
     int aaqqaaqqaaqqaaqqaaqqaaqq = -2147483648;

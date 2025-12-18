@@ -1,4 +1,4 @@
-#include "stdafx.h"
+п»ї#include "stdafx.h"
 #include <vector>
 #include <stack>
 #include <sstream>
@@ -61,7 +61,7 @@ namespace GN
                 }
                 con.push_back(str);
             }
-            else if (idtable.table[i]->idtype == IT::IDTYPE::V) // Переменные
+            else if (idtable.table[i]->idtype == IT::IDTYPE::V) // РџРµСЂРµРјРµРЅРЅС‹Рµ
             {
                 switch (idtable.table[i]->iddatatype)
                 {
@@ -310,7 +310,7 @@ namespace GN
         int paramCount = 0;
         bool first = true;
 
-        // Собираем параметры
+        // РЎРѕР±РёСЂР°РµРј РїР°СЂР°РјРµС‚СЂС‹
         while (LT_ENTRY(i)->lexema != LEX_RIGHTHESIS)
         {
             if (LT_ENTRY(i)->lexema == LEX_ID)
@@ -323,14 +323,14 @@ namespace GN
                 str += string(IT_ENTRY(i)->FullName) + ": QWORD";
                 params.push_back(ParamInfo(string(IT_ENTRY(i)->FullName), paramCount++));
 
-                // Отмечаем параметр как переменную (V) для использования в теле функции
+                // РћС‚РјРµС‡Р°РµРј РїР°СЂР°РјРµС‚СЂ РєР°Рє РїРµСЂРµРјРµРЅРЅСѓСЋ (V) РґР»СЏ РёСЃРїРѕР»СЊР·РѕРІР°РЅРёСЏ РІ С‚РµР»Рµ С„СѓРЅРєС†РёРё
                 IT_ENTRY(i)->idtype = IT::IDTYPE::V;
             }
             i++;
         }
         str += "\n";
 
-        // Сохраняем параметры из регистров в переменные
+        // РЎРѕС…СЂР°РЅСЏРµРј РїР°СЂР°РјРµС‚СЂС‹ РёР· СЂРµРіРёСЃС‚СЂРѕРІ РІ РїРµСЂРµРјРµРЅРЅС‹Рµ
         for (const auto& param : params)
         {
             switch (param.regIndex)
@@ -354,7 +354,7 @@ namespace GN
         i++;
         if (i < lextable.current_size && LT_ENTRY(i)->lexema == LEX_LEFTHESIS) i++;
 
-        // Собираем аргументы
+        // РЎРѕР±РёСЂР°РµРј Р°СЂРіСѓРјРµРЅС‚С‹
         for (; i < lextable.current_size; i++)
         {
             if (LT_ENTRY(i)->lexema == LEX_SEMICOLON ||
@@ -374,10 +374,10 @@ namespace GN
             temp.pop();
         }
 
-        // Выделяем shadow space
+        // Р’С‹РґРµР»СЏРµРј shadow space
         str += "sub rsp, 20h\n";
 
-        // Передаем аргументы в правильном порядке
+        // РџРµСЂРµРґР°РµРј Р°СЂРіСѓРјРµРЅС‚С‹ РІ РїСЂР°РІРёР»СЊРЅРѕРј РїРѕСЂСЏРґРєРµ
         for (size_t k = 0; k < args.size(); k++)
         {
             string src;
@@ -388,14 +388,14 @@ namespace GN
 
             str += src + "\n";
 
-            // Для x64: первые 4 аргумента через RCX, RDX, R8, R9
+            // Р”Р»СЏ x64: РїРµСЂРІС‹Рµ 4 Р°СЂРіСѓРјРµРЅС‚Р° С‡РµСЂРµР· RCX, RDX, R8, R9
             if (k == 0) str += "mov rcx, rax\n";
             else if (k == 1) str += "mov rdx, rax\n";
             else if (k == 2) str += "mov r8, rax\n";
             else if (k == 3) str += "mov r9, rax\n";
             else
             {
-                // Больше 4 аргументов - через стек (редкий случай)
+                // Р‘РѕР»СЊС€Рµ 4 Р°СЂРіСѓРјРµРЅС‚РѕРІ - С‡РµСЂРµР· СЃС‚РµРє (СЂРµРґРєРёР№ СЃР»СѓС‡Р°Р№)
                 str += "push rax\n";
             }
         }
@@ -403,7 +403,7 @@ namespace GN
         str += "call " + string(e->FullName) + "\n";
         str += "add rsp, 20h\n";
 
-        // Очищаем стек от дополнительных аргументов (>4)
+        // РћС‡РёС‰Р°РµРј СЃС‚РµРє РѕС‚ РґРѕРїРѕР»РЅРёС‚РµР»СЊРЅС‹С… Р°СЂРіСѓРјРµРЅС‚РѕРІ (>4)
         if (args.size() > 4)
         {
             str += "add rsp, " + itoS(8 * (args.size() - 4)) + "\n";

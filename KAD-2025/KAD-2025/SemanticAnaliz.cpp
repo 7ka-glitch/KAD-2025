@@ -50,7 +50,8 @@ namespace SM
 							int nextIdx = lextable.table[k + 1]->idxTI;
 
 							if (nextIdx == LT_TI_NULLXDX) break;
-
+							if (idtable.table[nextIdx]->iddatatype != IT::IDDATATYPE::INT)
+								break;
 							
 							long long nextVal = (long long)idtable.table[nextIdx]->value.vint;
 
@@ -219,7 +220,7 @@ namespace SM
 						for (int j = i + 1; lextable.table[j]->lexema != LEX_RIGHTHESIS; j++)
 						{
 							
-							if (lextable.table[j]->lexema == LEX_ID || lextable.table[j]->lexema == LEX_LITERAL)
+							if (lextable.table[j]->lexema == LEX_ID && lextable.table[j+1]->lexema != LEX_OPERATOR || lextable.table[j]->lexema == LEX_LITERAL && lextable.table[j+1]->lexema != LEX_OPERATOR)
 							{
 								paramscount++;
 								IT::IDDATATYPE ctype = idtable.table[lextable.table[j]->idxTI]->iddatatype;
@@ -244,9 +245,14 @@ namespace SM
 					{
 						if (idtable.table[lextable.table[k]->idxTI]->iddatatype != IT::IDDATATYPE::INT)
 							throw ERROR_THROW_IN(706, lextable.table[k]->sn, lextable.table[k]->tn);
+
+						if(idtable.table[lextable.table[k]->idxTI]->value.vint < 0)
+							throw ERROR_THROW_IN(706, lextable.table[k]->sn, lextable.table[k]->tn);
 					}
 				}
-				break;
+				break; 
+
+
 			}
 			}
 		}

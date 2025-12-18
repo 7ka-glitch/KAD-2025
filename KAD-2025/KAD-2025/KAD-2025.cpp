@@ -88,7 +88,7 @@ int wmain(int argc, wchar_t* argv[])
 		{
 			Log::WriteError(log.stream, e);
 			Log::Close(log);
-			cout << e.message << endl << "Подробнее в протоколе (log файле)" << endl;
+			cout << e.message << endl << "Подробнее в протоколе (log файле)"  << endl;
 		}
 	}
 

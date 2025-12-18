@@ -112,13 +112,8 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <Text Include="..\Debug\Files\in.txt">
+    <Text Include="..\examples\control.txt">
       <Filter>Файлы ресурсов</Filter>
     </Text>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Files\in.txt.asm">
-      <Filter>Файлы ресурсов</Filter>
-    </None>
   </ItemGroup>
 </Project>

@@ -163,10 +163,7 @@
     <ClInclude Include="stdafx.h" />
   </ItemGroup>
   <ItemGroup>
-    <Text Include="..\Debug\Files\in.txt" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Files\in.txt.asm" />
+    <Text Include="..\examples\control.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
