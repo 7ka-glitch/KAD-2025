@@ -1,0 +1,31 @@
+ПЕРЕМЕННЫЕ
+Индекс LE	Область видимости	Идентификатор	Тип Идентификатора	Тип данных	Значение	Длина строки
+        6	             zaza	            x	                 P	       INT	       0	           -
+       10	             zaza	            y	                 P	       INT	       0	           -
+       37	             main	            b	                 V	       INT	       0	           -
+       52	             main	            x	                 V	       INT	       0	           -
+       59	             main	aaqqaaqqaaqqaaqqaaqq	                 V	       INT	       0	           -
+       95	             main	            s	                 V	       STR	        	           0
+      100	             main	           za	                 V	       STR	        	           0
+      123	             main	           st	                 V	       STR	        	           0
+
+ФУНКЦИИ
+Индекс LE	Область видимости	Идентификатор	Тип данных возврата
+        0	           global	       lenght	                INT
+        0	           global	     intToStr	                STR
+        2	           global	         zaza	                INT
+
+ЛИТЕРАЛЫ
+Индекс LE	Идентификатор	Тип данных	Длина строки		                 Значение
+       14	          L0        INT	              -		                                       2	
+       18	          L1        STR	             13                                     	"Hello World"
+       33	          L2        STR	             12                                     	"---TEST---"
+       41	          L3        INT	              -		                                      -1	
+       54	          L4        INT	              -		                                      10	
+       61	          L5        INT	              -		                             -2147483648	
+       67	          L6        INT	              -		                                     122	
+       97	          L7        STR	              7                                     	"Hello"
+      114	          L8        INT	              -		                                       5	
+      125	          L9        STR	              4                                     	"b="
+      131	         L10        INT	              -		                                       3	
+      137	         L11        INT	              -		                                       1	

@@ -60,7 +60,7 @@ namespace FST
 	bool step(FST& fst, short*& rstates)
 	{
 		bool rc = false;
-		std::swap(rstates, fst.rstates);			//смена массивов
+		std::swap(rstates, fst.rstates);			
 		for (short i = 0; i < fst.nstates; i++)
 		{
 			if (rstates[i] == fst.position)

@@ -8,7 +8,7 @@
 
 using namespace std;
 
-// [FIX] Добавлен аргумент int& i, чтобы управлять позицией чтения извне
+
 bool FindLexema(In::IN& in, char* lexema, int& i);
 
 void LexAnalysis(In::IN& in, LT::LexTable& lex, IT::IdTable& id)
@@ -29,13 +29,13 @@ void LexAnalysis(In::IN& in, LT::LexTable& lex, IT::IdTable& id)
 	bool lexID = true, lexInt = false, lexComment = false;
 	int main = 0;
 
-	// [FIX] Переменная i теперь здесь, а не static внутри FindLexema
+	
 	int i = 0;
 
 	stack<string> areaOfVisibility;
 	areaOfVisibility.push(GLOBAL);
 
-	// [FIX] Передаем i в функцию
+	
 	while (FindLexema(in, lexema, i))
 	{
 		currentLex++;
@@ -51,7 +51,7 @@ void LexAnalysis(In::IN& in, LT::LexTable& lex, IT::IdTable& id)
 		case LEX_RIGHTHESIS:
 		case LEX_EQUAL:
 		{
-			// [FIX] Добавлена защита от обработки символов внутри комментария (если вдруг логика пропуска даст сбой)
+			
 			if (!lexComment)
 			{
 				LT::Add(lex, new LT::Entry(*lexema, currentRow, currentLex));
@@ -73,17 +73,13 @@ void LexAnalysis(In::IN& in, LT::LexTable& lex, IT::IdTable& id)
 
 		case '#':
 		{
-			// [FIX] Радикальное решение для комментариев
-			// Мы просто пропускаем весь текст до символа новой строки прямо в буфере
-			lexID = false; // Сам символ # не является ID
-			lexComment = false; // Флаг нам больше не нужен, мы физически пропускаем текст
+			lexID = false; 
+			lexComment = false;
 
-			// Бежим по тексту, пока не найдем вертикальную черту (конец строки) или конец файла
 			while (i < in.size && in.text[i] != IN_CODE_VERTICAL_LINE)
 			{
 				i++;
 			}
-			// Следующий вызов FindLexema начнет чтение уже с новой строки (вертикальной черты)
 			break;
 		}
 
@@ -98,7 +94,7 @@ void LexAnalysis(In::IN& in, LT::LexTable& lex, IT::IdTable& id)
 			}
 			break;
 		}
-		// ... (остальной код без изменений, так как lexComment теперь сбрасывается корректно) ...
+		
 		case 'i':
 		{
 			FST::FST fst_int = FST_INT(lexema);
@@ -241,7 +237,7 @@ void LexAnalysis(In::IN& in, LT::LexTable& lex, IT::IdTable& id)
 		default:
 		{
 			FST::FST fst_literal_i = FST_LITERAL_I(lexema);
-			if (FST::execute(fst_literal_i) && !lexComment) // Добавил !lexComment
+			if (FST::execute(fst_literal_i) && !lexComment) 
 			{
 				lexID = false; lexInt = true;
 			}
@@ -318,12 +314,12 @@ void LexAnalysis(In::IN& in, LT::LexTable& lex, IT::IdTable& id)
 	LT::Add(lex, new LT::Entry('$', currentRow, currentLex));
 }
 
-// [FIX] Убрана static int i, теперь позиция передается по ссылке извне
+
 bool FindLexema(In::IN& in, char* lexema, int& i)
 {
 	bool s_literal = false;
 	int indexLexema = 0;
-	// Цикл использует переданную i
+
 	for (; i < in.size && (in.text[i] != IN_CODE_SPACE || s_literal); i++)
 	{
 		if (indexLexema >= TI_STR_MAXSIZE - 1)
@@ -335,14 +331,12 @@ bool FindLexema(In::IN& in, char* lexema, int& i)
 	}
 	lexema[indexLexema] = TI_STR_DEFAULT;
 
-	// Важно: если мы остановились на пробеле, нужно его перешагнуть, 
-	// чтобы следующий вызов не застрял на нем.
-	// Но если это конец файла, перешагивать нельзя.
+	
 	if (i < in.size && in.text[i] == IN_CODE_SPACE) {
 		i++;
 	}
 
-	// Возвращаем true, если удалось считать хоть что-то
+	
 	return indexLexema > 0 || (i < in.size);
 }
 

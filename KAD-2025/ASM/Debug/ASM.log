@@ -1,28 +1,132 @@
-﻿Сборка начата 24.11.2025 01:37:09.
-Уровень детализации журнала: Normal.     1>Проект "D:\KAD-2022-CourseProject-main\KAD-2022\ASM\ASM.vcxproj" в узле 2 (целевые объекты Rebuild).
-     1>_PrepareForClean:
-         Файл "Debug\ASM.tlog\ASM.lastbuildstate" удаляется.
-       PrepareForBuild:
+﻿Сборка начата 18.12.2025 01:40:36.
+Уровень детализации журнала: Normal.     1>Проект "D:\KAD-2025-CourseProject-main\KAD-2025\ASM\ASM.vcxproj" в узле 2 (целевые объекты Build).
+     1>PrepareForBuild:
          Структурированный вывод включен. Форматирование диагностики компилятора будет отражать иерархию ошибок. Подробнее см. https://aka.ms/cpp/structured-output.
+         Создание каталога "D:\KAD-2025-CourseProject-main\KAD-2025\Debug\".
        InitializeBuildStatus:
-         Создание "Debug\ASM.tlog\unsuccessfulbuild", так как было задано "AlwaysCreate".
          Обращение к "Debug\ASM.tlog\unsuccessfulbuild".
        _MASM:
-         Assembling ..\Debug\Files\examples\2.txt.asm...
-         cmd.exe /C "C:\Users\karly\AppData\Local\Temp\tmp597f430acdd148b9945550d691650993.cmd"
-         ml.exe /c /nologo /Zi /Fo"Debug\2.txt.obj" /W3 /errorReport:prompt  /Ta..\Debug\Files\examples\2.txt.asm
-       Link:
-         D:\VS\heads\VC\Tools\MSVC\14.42.34433\bin\HostX86\x86\link.exe /ERRORREPORT:PROMPT /OUT:"D:\KAD-2022-CourseProject-main\KAD-2022\Debug\ASM.exe" /INCREMENTAL /ILK:"Debug\ASM.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:\KAD-2022-CourseProject-main\KAD-2022\Debug\ASM.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\KAD-2022-CourseProject-main\KAD-2022\Debug\ASM.lib" /MACHINE:X86 ..\Debug\StaticLib.lib Debug\2.txt.obj
-     1>LINK : fatal error LNK1104: не удается открыть файл "..\Debug\StaticLib.lib"
-     1>Сборка проекта "D:\KAD-2022-CourseProject-main\KAD-2022\ASM\ASM.vcxproj" завершена (целевые объекты Rebuild) с ошибкой.
+         Assembling ..\examples\control.txt.asm...
+         cmd.exe /C "C:\Users\karly\AppData\Local\Temp\tmp03932e46c8594eeb80e502e288cdcb49.cmd"
+         ml.exe /c /nologo /Zi /Fo"Debug\control.txt.obj" /W3 /errorReport:prompt  /Ta..\examples\control.txt.asm
+     1>..\examples\control.txt.asm(10): error A2013: .MODEL must precede this directive
+     1>..\examples\control.txt.asm(11): error A2034: must be in segment block
+     1>..\examples\control.txt.asm(12): error A2034: must be in segment block
+     1>..\examples\control.txt.asm(13): error A2034: must be in segment block
+     1>..\examples\control.txt.asm(15): error A2034: must be in segment block
+     1>..\examples\control.txt.asm(16): error A2034: must be in segment block
+     1>..\examples\control.txt.asm(17): error A2034: must be in segment block
+     1>..\examples\control.txt.asm(18): error A2034: must be in segment block
+     1>..\examples\control.txt.asm(19): error A2034: must be in segment block
+     1>..\examples\control.txt.asm(20): error A2034: must be in segment block
+     1>..\examples\control.txt.asm(21): error A2034: must be in segment block
+     1>..\examples\control.txt.asm(22): error A2034: must be in segment block
+     1>..\examples\control.txt.asm(23): error A2034: must be in segment block
+     1>..\examples\control.txt.asm(24): error A2034: must be in segment block
+     1>..\examples\control.txt.asm(25): error A2034: must be in segment block
+     1>..\examples\control.txt.asm(26): error A2013: .MODEL must precede this directive
+     1>..\examples\control.txt.asm(28): error A2034: must be in segment block
+     1>..\examples\control.txt.asm(29): error A2034: must be in segment block
+     1>..\examples\control.txt.asm(30): error A2034: must be in segment block
+     1>..\examples\control.txt.asm(31): error A2034: must be in segment block
+     1>..\examples\control.txt.asm(32): error A2034: must be in segment block
+     1>..\examples\control.txt.asm(33): error A2034: must be in segment block
+     1>..\examples\control.txt.asm(34): error A2013: .MODEL must precede this directive
+     1>..\examples\control.txt.asm(37): error A2034: must be in segment block : zaza
+     1>..\examples\control.txt.asm(38): error A2034: must be in segment block
+     1>..\examples\control.txt.asm(39): error A2034: must be in segment block
+     1>..\examples\control.txt.asm(41): error A2034: must be in segment block
+     1>..\examples\control.txt.asm(42): error A2034: must be in segment block
+     1>..\examples\control.txt.asm(43): error A2034: must be in segment block
+     1>..\examples\control.txt.asm(44): error A2034: must be in segment block
+     1>..\examples\control.txt.asm(45): error A2034: must be in segment block
+     1>..\examples\control.txt.asm(46): error A2034: must be in segment block
+     1>..\examples\control.txt.asm(47): error A2034: must be in segment block
+     1>..\examples\control.txt.asm(49): error A2034: must be in segment block
+     1>..\examples\control.txt.asm(50): error A2034: must be in segment block
+     1>..\examples\control.txt.asm(51): error A2034: must be in segment block
+     1>..\examples\control.txt.asm(52): error A2034: must be in segment block
+     1>..\examples\control.txt.asm(53): error A2034: must be in segment block
+     1>..\examples\control.txt.asm(54): error A2034: must be in segment block
+     1>..\examples\control.txt.asm(56): error A2034: must be in segment block
+     1>..\examples\control.txt.asm(57): error A2034: must be in segment block
+     1>..\examples\control.txt.asm(58): error A2034: must be in segment block
+     1>..\examples\control.txt.asm(59): error A2034: must be in segment block
+     1>..\examples\control.txt.asm(61): error A2034: must be in segment block
+     1>..\examples\control.txt.asm(62): error A2034: must be in segment block
+     1>..\examples\control.txt.asm(63): error A2034: must be in segment block
+     1>..\examples\control.txt.asm(64): error A2034: must be in segment block
+     1>..\examples\control.txt.asm(65): error A2034: must be in segment block
+     1>..\examples\control.txt.asm(66): error A2034: must be in segment block
+     1>..\examples\control.txt.asm(67): error A2034: must be in segment block
+     1>..\examples\control.txt.asm(68): error A2034: must be in segment block
+     1>..\examples\control.txt.asm(69): error A2034: must be in segment block
+     1>..\examples\control.txt.asm(70): error A2034: must be in segment block
+     1>..\examples\control.txt.asm(72): fatal error A1010: unmatched block nesting : zaza
+     1>D:\VS\heads\MSBuild\Microsoft\VC\v170\BuildCustomizations\masm.targets(70,5): error MSB3721: выход из команды "ml.exe /c /nologo /Zi /Fo"Debug\control.txt.obj" /W3 /errorReport:prompt  /Ta..\examples\control.txt.asm" с кодом "1".
+     1>Сборка проекта "D:\KAD-2025-CourseProject-main\KAD-2025\ASM\ASM.vcxproj" завершена (целевые объекты Build) с ошибкой.
 
 Ошибка сборки.
 
-       "D:\KAD-2022-CourseProject-main\KAD-2022\ASM\ASM.vcxproj" (целевой объект Rebuild ) (1) ->
-       (Целевой объект Link) -> 
-         LINK : fatal error LNK1104: не удается открыть файл "..\Debug\StaticLib.lib"
+       "D:\KAD-2025-CourseProject-main\KAD-2025\ASM\ASM.vcxproj" (целевой объект Build ) (1) ->
+       (Целевой объект _MASM) -> 
+         ..\examples\control.txt.asm(10): error A2013: .MODEL must precede this directive
+         ..\examples\control.txt.asm(11): error A2034: must be in segment block
+         ..\examples\control.txt.asm(12): error A2034: must be in segment block
+         ..\examples\control.txt.asm(13): error A2034: must be in segment block
+         ..\examples\control.txt.asm(15): error A2034: must be in segment block
+         ..\examples\control.txt.asm(16): error A2034: must be in segment block
+         ..\examples\control.txt.asm(17): error A2034: must be in segment block
+         ..\examples\control.txt.asm(18): error A2034: must be in segment block
+         ..\examples\control.txt.asm(19): error A2034: must be in segment block
+         ..\examples\control.txt.asm(20): error A2034: must be in segment block
+         ..\examples\control.txt.asm(21): error A2034: must be in segment block
+         ..\examples\control.txt.asm(22): error A2034: must be in segment block
+         ..\examples\control.txt.asm(23): error A2034: must be in segment block
+         ..\examples\control.txt.asm(24): error A2034: must be in segment block
+         ..\examples\control.txt.asm(25): error A2034: must be in segment block
+         ..\examples\control.txt.asm(26): error A2013: .MODEL must precede this directive
+         ..\examples\control.txt.asm(28): error A2034: must be in segment block
+         ..\examples\control.txt.asm(29): error A2034: must be in segment block
+         ..\examples\control.txt.asm(30): error A2034: must be in segment block
+         ..\examples\control.txt.asm(31): error A2034: must be in segment block
+         ..\examples\control.txt.asm(32): error A2034: must be in segment block
+         ..\examples\control.txt.asm(33): error A2034: must be in segment block
+         ..\examples\control.txt.asm(34): error A2013: .MODEL must precede this directive
+         ..\examples\control.txt.asm(37): error A2034: must be in segment block : zaza
+         ..\examples\control.txt.asm(38): error A2034: must be in segment block
+         ..\examples\control.txt.asm(39): error A2034: must be in segment block
+         ..\examples\control.txt.asm(41): error A2034: must be in segment block
+         ..\examples\control.txt.asm(42): error A2034: must be in segment block
+         ..\examples\control.txt.asm(43): error A2034: must be in segment block
+         ..\examples\control.txt.asm(44): error A2034: must be in segment block
+         ..\examples\control.txt.asm(45): error A2034: must be in segment block
+         ..\examples\control.txt.asm(46): error A2034: must be in segment block
+         ..\examples\control.txt.asm(47): error A2034: must be in segment block
+         ..\examples\control.txt.asm(49): error A2034: must be in segment block
+         ..\examples\control.txt.asm(50): error A2034: must be in segment block
+         ..\examples\control.txt.asm(51): error A2034: must be in segment block
+         ..\examples\control.txt.asm(52): error A2034: must be in segment block
+         ..\examples\control.txt.asm(53): error A2034: must be in segment block
+         ..\examples\control.txt.asm(54): error A2034: must be in segment block
+         ..\examples\control.txt.asm(56): error A2034: must be in segment block
+         ..\examples\control.txt.asm(57): error A2034: must be in segment block
+         ..\examples\control.txt.asm(58): error A2034: must be in segment block
+         ..\examples\control.txt.asm(59): error A2034: must be in segment block
+         ..\examples\control.txt.asm(61): error A2034: must be in segment block
+         ..\examples\control.txt.asm(62): error A2034: must be in segment block
+         ..\examples\control.txt.asm(63): error A2034: must be in segment block
+         ..\examples\control.txt.asm(64): error A2034: must be in segment block
+         ..\examples\control.txt.asm(65): error A2034: must be in segment block
+         ..\examples\control.txt.asm(66): error A2034: must be in segment block
+         ..\examples\control.txt.asm(67): error A2034: must be in segment block
+         ..\examples\control.txt.asm(68): error A2034: must be in segment block
+         ..\examples\control.txt.asm(69): error A2034: must be in segment block
+         ..\examples\control.txt.asm(70): error A2034: must be in segment block
+         ..\examples\control.txt.asm(72): fatal error A1010: unmatched block nesting : zaza
+         D:\VS\heads\MSBuild\Microsoft\VC\v170\BuildCustomizations\masm.targets(70,5): error MSB3721: выход из команды "ml.exe /c /nologo /Zi /Fo"Debug\control.txt.obj" /W3 /errorReport:prompt  /Ta..\examples\control.txt.asm" с кодом "1".
 
     Предупреждений: 0
-    Ошибок: 1
+    Ошибок: 55
 
-Прошло времени 00:00:01.38
+Прошло времени 00:00:00.49

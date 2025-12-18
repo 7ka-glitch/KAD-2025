@@ -1,4 +1,4 @@
-﻿Сборка начата 17.12.2025 17:18:07.
+﻿Сборка начата 18.12.2025 04:59:52.
 Уровень детализации журнала: Normal.     1>Проект "D:\KAD-2025-CourseProject-main\KAD-2025\StaticLib\StaticLib.vcxproj" в узле 2 (целевые объекты Rebuild).
      1>_PrepareForClean:
          Файл "x64\Debug\StaticLib.tlog\StaticLib.lastbuildstate" удаляется.
@@ -28,4 +28,4 @@
     Предупреждений: 1
     Ошибок: 0
 
-Прошло времени 00:00:03.43
+Прошло времени 00:00:01.28

@@ -1,4 +1,4 @@
-﻿Сборка начата 17.12.2025 23:04:20.
+﻿Сборка начата 18.12.2025 09:57:20.
 Уровень детализации журнала: Normal.     1>Проект "D:\KAD-2025-CourseProject-main\KAD-2025\ASM\ASM.vcxproj" в узле 2 (целевые объекты Build).
      1>PrepareForBuild:
          Структурированный вывод включен. Форматирование диагностики компилятора будет отражать иерархию ошибок. Подробнее см. https://aka.ms/cpp/structured-output.
@@ -6,11 +6,11 @@
          Создание "x64\Debug\ASM.tlog\unsuccessfulbuild", так как было задано "AlwaysCreate".
          Обращение к "x64\Debug\ASM.tlog\unsuccessfulbuild".
        _MASM:
-         Assembling ..\Debug\Files\in.txt.asm...
-         cmd.exe /C "C:\Users\karly\AppData\Local\Temp\tmp2ee5702534f942d9aa464197154d6750.cmd"
-         ml64.exe /c /nologo /Zi /Fo"x64\Debug\in.txt.obj" /W3 /errorReport:prompt  /Ta..\Debug\Files\in.txt.asm
+         Assembling ..\examples\control.txt.asm...
+         cmd.exe /C "C:\Users\karly\AppData\Local\Temp\tmpc9361442e05a4be59d239b8fd2dac32e.cmd"
+         ml64.exe /c /nologo /Zi /Fo"x64\Debug\control.txt.obj" /W3 /errorReport:prompt  /Ta..\examples\control.txt.asm
        Link:
-         D:\VS\heads\VC\Tools\MSVC\14.42.34433\bin\HostX64\x64\link.exe /ERRORREPORT:PROMPT /OUT:"D:\KAD-2025-CourseProject-main\KAD-2025\x64\Debug\ASM.exe" /INCREMENTAL /ILK:"x64\Debug\ASM.ilk" /NOLOGO /LIBPATH:"D:\KAD-2025-CourseProject-main\KAD-2025\x64\Debug\\" kernel32.lib StaticLib.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:\KAD-2025-CourseProject-main\KAD-2025\x64\Debug\ASM.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\KAD-2025-CourseProject-main\KAD-2025\x64\Debug\ASM.lib" /MACHINE:X64 x64\Debug\in.txt.obj
+         D:\VS\heads\VC\Tools\MSVC\14.42.34433\bin\HostX64\x64\link.exe /ERRORREPORT:PROMPT /OUT:"D:\KAD-2025-CourseProject-main\KAD-2025\x64\Debug\ASM.exe" /INCREMENTAL /ILK:"x64\Debug\ASM.ilk" /NOLOGO /LIBPATH:"D:\KAD-2025-CourseProject-main\KAD-2025\x64\Debug\\" kernel32.lib StaticLib.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:\KAD-2025-CourseProject-main\KAD-2025\x64\Debug\ASM.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\KAD-2025-CourseProject-main\KAD-2025\x64\Debug\ASM.lib" /MACHINE:X64 x64\Debug\control.txt.obj
          ASM.vcxproj -> D:\KAD-2025-CourseProject-main\KAD-2025\x64\Debug\ASM.exe
        FinalizeBuildStatus:
          Файл "x64\Debug\ASM.tlog\unsuccessfulbuild" удаляется.
@@ -21,4 +21,4 @@
     Предупреждений: 0
     Ошибок: 0
 
-Прошло времени 00:00:00.49
+Прошло времени 00:00:01.18

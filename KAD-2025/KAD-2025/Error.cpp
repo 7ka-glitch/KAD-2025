@@ -59,7 +59,7 @@ namespace Error
 		ERROR_ENTRY_NODEF10(620), ERROR_ENTRY_NODEF10(630), ERROR_ENTRY_NODEF10(640), ERROR_ENTRY_NODEF10(650),
 		ERROR_ENTRY_NODEF10(660), ERROR_ENTRY_NODEF10(670), ERROR_ENTRY_NODEF10(680), ERROR_ENTRY_NODEF10(690),
 		ERROR_ENTRY(700, "Ошибочное деление на 0"),
-		ERROR_ENTRY(701, "Типы данных в выражении не совпадают, строка 3, лексема 5"),
+		ERROR_ENTRY(701, "Типы данных в выражении не совпадают"),
 		ERROR_ENTRY(702, "Недопустимое строковое выражение справа от знака '='"),
 		ERROR_ENTRY(703, "Тип функции и возвращаемое значение не совпадают"),
 		ERROR_ENTRY(704, "Несовпадение типов передаваемых параметров"),
@@ -67,7 +67,8 @@ namespace Error
 		ERROR_ENTRY(706, "Неверное тип счетчика цикла"),
 		ERROR_ENTRY(707, "Превышено число параметров функции, строка"),
 		ERROR_ENTRY(708, "Переполнение типа INT (результат выражения выходит за границы)"),
-		ERROR_ENTRY_NODEF(709), ERROR_ENTRY_NODEF(710),
+		ERROR_ENTRY(709, "Возведение в отрицательную степень"),
+		ERROR_ENTRY_NODEF(710),
 		ERROR_ENTRY_NODEF10(720), ERROR_ENTRY_NODEF10(730), ERROR_ENTRY_NODEF10(740), ERROR_ENTRY_NODEF10(750),
 		ERROR_ENTRY_NODEF10(760), ERROR_ENTRY_NODEF10(770), ERROR_ENTRY_NODEF10(780), ERROR_ENTRY_NODEF10(790),
 		ERROR_ENTRY_NODEF100(800), ERROR_ENTRY_NODEF100(900)

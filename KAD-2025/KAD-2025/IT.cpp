@@ -97,7 +97,7 @@ namespace IT
 
 	int IsLiteralInt(IdTable& idtable, char* lexema)
 	{
-		int number = atoi(lexema);
+		int number = atoll(lexema);
 		for (int i = 0; i < idtable.current_size; i++)
 		{
 			if (idtable.table[i]->idtype == IT::IDTYPE::L && idtable.table[i]->iddatatype == IT::IDDATATYPE::INT)
@@ -120,7 +120,7 @@ namespace IT
 
 	void Delete(IdTable& idtable)
 	{
-		for (int i = 7; i < idtable.current_size; i++)
+		for (int i = 2; i < idtable.current_size; i++)
 		{
 			delete idtable.table[i];
 		}

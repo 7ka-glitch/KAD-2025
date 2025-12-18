@@ -5,7 +5,7 @@
     <DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <LocalDebuggerCommandArguments>-in:D:\KAD-2025-CourseProject-main\KAD-2025\Debug\Files\in.txt</LocalDebuggerCommandArguments>
+    <LocalDebuggerCommandArguments>-in:D:\KAD-2025-CourseProject-main\KAD-2025\examples\control.txt</LocalDebuggerCommandArguments>
     <DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
   </PropertyGroup>
 </Project>

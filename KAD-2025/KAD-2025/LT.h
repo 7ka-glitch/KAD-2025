@@ -26,8 +26,8 @@
 #define	LEX_EQUAL		'='			// лексема для =
 
 
-#define PARM_LEX_DEFAULT_LOCATION	L"D:\\KAD-2025-CourseProject-main\\KAD-2025\\Debug\\Files\\"	
-#define PARM_LEX_DEFAULT_EXT		L".lex.txt" //для файла с итогом лексического анализa (таблица лексем)
+#define PARM_LEX_DEFAULT_LOCATION	L"D:\\KAD-2025-CourseProject-main\\KAD-2025\\tables\\"	
+#define PARM_LEX_DEFAULT_EXT		L".lex.txt" 
 
 namespace LT							// таблица лексем
 {

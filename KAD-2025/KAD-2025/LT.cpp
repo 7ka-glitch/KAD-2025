@@ -103,8 +103,6 @@ namespace LT
 			if (currentString == lextable.table[i]->sn)
 			{
 				lexStream << lextable.table[i]->lexema;
-				//if (lextable.table[i]->idxTI != LT_TI_NULLXDX)
-				//	lexStream << "[" << lextable.table[i]->idxTI << "]";
 				i++;
 			}
 			else

@@ -13,18 +13,16 @@ using namespace std;
 #define GLOBAL				"global"		// именование глобальной области видимости
 #define TI_STR_MAXSIZE		256				// максимальный размер строки + '\0'
 #define FUNC_LEN			"lenght"	// идентификатор стандартоной функции
-#define FUNC_WRITE_INT		"write_int" // (вывод)
-#define FUNC_WRITE_STR		"write_str" // (вывод )
 #define FUNC_ITOS			"intToStr"
 
 
-#define PARM_ID_DEFAULT_LOCATION		L"D:\\KAD-2025-CourseProject-main\\KAD-2025\\Debug\\Files\\"
-#define PARM_ID_DEFAULT_EXT				L".id.txt" //для файла с итогом лексического анализa(таблица идентификаторов и литералов)
+#define PARM_ID_DEFAULT_LOCATION		L"D:\\KAD-2025-CourseProject-main\\KAD-2025\\tables\\"
+#define PARM_ID_DEFAULT_EXT				L".id.txt" 
 
 namespace IT	// таблица идентификатов
 {
 	enum class IDDATATYPE { DEF, INT, STR };						// типы данных идентификаторов: не определен, integer, string
-	enum class IDTYPE { D, V, F, P, L, C };							// типы идентификаторов: не определен, переменная, функция, параметр, литерал
+	enum class IDTYPE { D, V, F, P, L};							// типы идентификаторов: не определен, переменная, функция, параметр, литерал
 
 	struct Entry	// строка таблицы идентификаторов
 	{

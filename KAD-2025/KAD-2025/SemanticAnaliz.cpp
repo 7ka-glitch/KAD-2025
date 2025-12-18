@@ -14,10 +14,13 @@ namespace SM
 			{
 			case LEX_OPERATOR:	
 			{
+				if (lextable.table[i]->sign == '^')
+					if (lextable.table[i + 2]->idxTI != LT_TI_NULLXDX) 
+						if ((long long)idtable.table[lextable.table[i + 2]->idxTI]->value.vint < 0) throw ERROR_THROW_IN(709, lextable.table[i]->sn, lextable.table[i]->tn);
+
 				if (lextable.table[i]->sign == '/')
-					
-						if (idtable.table[lextable.table[i + 1]->idxTI]->value.vint == 0)
-							throw ERROR_THROW_IN(700, lextable.table[i + 1]->sn, lextable.table[i + 1]->tn);
+					if (idtable.table[lextable.table[i + 1]->idxTI]->value.vint == 0)
+						throw ERROR_THROW_IN(700, lextable.table[i + 1]->sn, lextable.table[i + 1]->tn);
 
 
 				bool isFirstOp = false;
@@ -57,6 +60,17 @@ namespace SM
 							else if (op == '/') {
 								if (nextVal == 0) throw ERROR_THROW_IN(700, curLex->sn, curLex->tn);
 								accumulator /= nextVal;
+							}
+							else if (op == '^') {
+								if (nextVal < 0) throw ERROR_THROW_IN(709, curLex->sn, curLex->tn);
+								long long base = accumulator;
+								accumulator = 1;
+								for (long long exp = 0; exp < nextVal; exp++) {
+									accumulator *= base;
+									if (accumulator > 2147483647LL || accumulator < -2147483648LL) {
+										throw ERROR_THROW_IN(708, curLex->sn, curLex->tn);
+									}
+								}
 							}
 
 							
@@ -155,10 +169,23 @@ namespace SM
 
 								if (leftOp != IT::IDDATATYPE::INT || rightOp != IT::IDDATATYPE::INT)
 									throw ERROR_THROW_IN(701, lextable.table[k]->sn, lextable.table[k]->tn);
+
+
+								
+							}
+							
+							
+							if (lextable.table[k]->idxTI != LT_TI_NULLXDX 
+								&& (lextable.table[k]->lexema == LEX_ID || lextable.table[k]->lexema == LEX_LITERAL)) 
+							{ 
+								IT::IDTYPE t = idtable.table[lextable.table[k]->idxTI]->idtype; 
+								if (t == IT::IDTYPE::V || t == IT::IDTYPE::L)
+									idtable.table[lextable.table[i - 1]->idxTI]->value.vint = idtable.table[lextable.table[k]->idxTI]->value.vint;
 							}
 						}
 					}
 				}
+
 				break;
 			}
 
