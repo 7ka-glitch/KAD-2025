@@ -93,7 +93,7 @@ namespace PN
 
 				if (!stk.empty() && stk.top()->lexema == LEX_LEFTHESIS)
 				{
-					stk.pop(); // Выталкиваем '('
+					stk.pop(); 
 
 					if (function)
 					{
@@ -109,7 +109,7 @@ namespace PN
 				if (function)
 				{
 					quantityParm++;
-					if (quantityParm > 9)
+					if (quantityParm > 4)
 						throw ERROR_THROW_IN(707, lextable.table[i]->sn, lextable.table[i]->tn);
 				}
 				while (stk.top()->lexema != LEX_LEFTHESIS)
@@ -146,17 +146,6 @@ namespace PN
 		}
 
 		return true;
-	}
-
-
-	int findExpression(LT::LexTable& lextable)
-	{
-		for (static int i = 0; i < lextable.current_size; i++)
-		{
-			if (lextable.table[i]->lexema == LEX_EQUAL)
-				return ++i;
-		}
-		return 0;
 	}
 
 

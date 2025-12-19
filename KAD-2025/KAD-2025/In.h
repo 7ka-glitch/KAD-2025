@@ -6,7 +6,6 @@
 #define IN_CODE_QUOTES '\"'
 #define IN_CODE_SPACE ' '
 #define MINUS '-'
-#define REPEAT 'n'
 #define BRACKET '('
 #define COMMA ','
 

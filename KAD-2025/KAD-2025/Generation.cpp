@@ -61,7 +61,7 @@ namespace GN
                 }
                 con.push_back(str);
             }
-            else if (idtable.table[i]->idtype == IT::IDTYPE::V) // Переменные
+            else if (idtable.table[i]->idtype == IT::IDTYPE::V) 
             {
                 switch (idtable.table[i]->iddatatype)
                 {
@@ -117,7 +117,7 @@ namespace GN
             case LEX_OPERATOR:
             {
                 char sign = LT_ENTRY(i)->sign;
-                if (sign != '+' && sign != '-' && sign != '*' && sign != '/' && sign != '%' && sign != '^')
+                if (sign != '+' && sign != '-' && sign != '*' && sign != '/'  && sign != '^')
                 {
                     break;
                 }
@@ -139,11 +139,6 @@ namespace GN
                 case '/':
                     str += "cdq\n";
                     str += "idiv rcx\n";
-                    break;
-                case '%':
-                    str += "cdq\n";
-                    str += "idiv rcx\n";
-                    str += "mov rax, rdx\n";
                     break;
                 case '^':
                     str += "mov rdx, rcx\n";
@@ -310,7 +305,7 @@ namespace GN
         int paramCount = 0;
         bool first = true;
 
-        // Собираем параметры
+        
         while (LT_ENTRY(i)->lexema != LEX_RIGHTHESIS)
         {
             if (LT_ENTRY(i)->lexema == LEX_ID)
@@ -323,14 +318,14 @@ namespace GN
                 str += string(IT_ENTRY(i)->FullName) + ": QWORD";
                 params.push_back(ParamInfo(string(IT_ENTRY(i)->FullName), paramCount++));
 
-                // Отмечаем параметр как переменную (V) для использования в теле функции
+               
                 IT_ENTRY(i)->idtype = IT::IDTYPE::V;
             }
             i++;
         }
         str += "\n";
 
-        // Сохраняем параметры из регистров в переменные
+        
         for (const auto& param : params)
         {
             switch (param.regIndex)
@@ -354,7 +349,7 @@ namespace GN
         i++;
         if (i < lextable.current_size && LT_ENTRY(i)->lexema == LEX_LEFTHESIS) i++;
 
-        // Собираем аргументы
+        
         for (; i < lextable.current_size; i++)
         {
             if (LT_ENTRY(i)->lexema == LEX_SEMICOLON ||
@@ -377,7 +372,7 @@ namespace GN
         // Выделяем shadow space
         str += "sub rsp, 20h\n";
 
-        // Передаем аргументы в правильном порядке
+        
         for (size_t k = 0; k < args.size(); k++)
         {
             string src;
@@ -388,14 +383,14 @@ namespace GN
 
             str += src + "\n";
 
-            // Для x64: первые 4 аргумента через RCX, RDX, R8, R9
+            
             if (k == 0) str += "mov rcx, rax\n";
             else if (k == 1) str += "mov rdx, rax\n";
             else if (k == 2) str += "mov r8, rax\n";
             else if (k == 3) str += "mov r9, rax\n";
             else
             {
-                // Больше 4 аргументов - через стек (редкий случай)
+               
                 str += "push rax\n";
             }
         }

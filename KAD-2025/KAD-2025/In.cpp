@@ -77,7 +77,7 @@ namespace In
 
 			case IN::N:
 				if (in.size > 3)
-					if (in.text[in.size - 4] == '=' && in.text[in.size - 1] == IN_CODE_SPACE && in.text[in.size - 2] == MINUS || in.text[in.size - 1] == IN_CODE_SPACE && in.text[in.size - 2] == MINUS && (in.text[in.size-4] == REPEAT || in.text[in.size - 4] == COMMA || in.text[in.size - 4] == BRACKET))
+					if (in.text[in.size - 4] == '=' && in.text[in.size - 1] == IN_CODE_SPACE && in.text[in.size - 2] == MINUS  || in.text[in.size - 4] == COMMA || in.text[in.size - 4] == BRACKET)
 						in.size--;
 				in.text[in.size] = ch;
 				in.size++;

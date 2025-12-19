@@ -95,7 +95,7 @@ namespace GRB
         va_start(args, s);
         for (short i = 1; i < size; i++)
         {
-            // GRBALPHABET - это short, но в va_arg типы short продвигаются до int
+           
             nt[i] = (GRBALPHABET)va_arg(args, int);
         }
         va_end(args);

@@ -1,4 +1,4 @@
-int function zaza(int param x, int param y)
+int function zaza(int param x, int param y,int param z)
 {
   cycle 2
   {
@@ -11,8 +11,9 @@ int function zaza(int param x, int param y)
 main
 {
     #test code
+
     write("---TEST---");
-    int b=zaza(1,2);
+    int b=zaza(1,2,"s");
     write(b);
     int x = ha-2;
     int aaqqaaqqaaqqaaqqaaqqaaqq = -2147483648;

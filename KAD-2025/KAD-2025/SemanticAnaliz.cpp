@@ -14,6 +14,15 @@ namespace SM
 			{
 			case LEX_OPERATOR:	
 			{
+				if (lextable.table[i - 1]->idxTI != LT_TI_NULLXDX && lextable.table[i + 1]->idxTI != LT_TI_NULLXDX)
+				{
+					IT::IDDATATYPE leftOp = idtable.table[lextable.table[i - 1]->idxTI]->iddatatype;
+					IT::IDDATATYPE rightOp = idtable.table[lextable.table[i + 1]->idxTI]->iddatatype;
+
+					if (leftOp !=  rightOp )
+						throw ERROR_THROW_IN(701, lextable.table[i]->sn, lextable.table[i]->tn);
+				}
+
 				if (lextable.table[i]->sign == '^')
 					if (lextable.table[i + 2]->idxTI != LT_TI_NULLXDX) 
 						if ((long long)idtable.table[lextable.table[i + 2]->idxTI]->value.vint < 0) throw ERROR_THROW_IN(709, lextable.table[i]->sn, lextable.table[i]->tn);
@@ -165,14 +174,6 @@ namespace SM
 									continue;
 								}
 
-								IT::IDDATATYPE leftOp = idtable.table[lextable.table[k - 1]->idxTI]->iddatatype;
-								IT::IDDATATYPE rightOp = idtable.table[lextable.table[k + 1]->idxTI]->iddatatype;
-
-								if (leftOp != IT::IDDATATYPE::INT || rightOp != IT::IDDATATYPE::INT)
-									throw ERROR_THROW_IN(701, lextable.table[k]->sn, lextable.table[k]->tn);
-
-
-								
 							}
 							
 							
